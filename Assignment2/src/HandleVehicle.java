@@ -68,7 +68,7 @@ public class HandleVehicle {
             }
         }
     }
-//
+    //
     public static void PrintAllVehicle(String file, ArrayList<Car> cars, ArrayList<Truck> trucks) {
         String output_information = "";
         String car_title = ("********************************************************Car Information********************************************************");

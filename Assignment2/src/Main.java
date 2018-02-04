@@ -10,11 +10,11 @@ public class Main
         ArrayList<Car> cars = new ArrayList<Car>();
         ArrayList<Truck> trucks = new ArrayList<Truck>();
 
-        HandlingBnb.readInputPropertyFile("/Users/leejoonsung/IdeaProjects/java/MyBnb/InputProperty.txt", apartments, houses, villas);
-        HandlingBnb.GiveRentalProperty(apartments, houses, villas);
-        HandlingBnb.PrintAllProperties("/Users/leejoonsung/IdeaProjects/java/MyBnb/OutputProperty.txt",apartments, houses, villas);
-        HandleVehicle.readInputVehicleFile("/Users/leejoonsung/IdeaProjects/java/MyBnb/InputVehicle.txt", cars, trucks);
-        HandleVehicle.PrintAllVehicle("/Users/leejoonsung/IdeaProjects/java/MyBnb/OutputVehicle.txt", cars, trucks);
+        HandleBnb.readInputPropertyFile("MyBnb/src/InputProperty.txt", apartments, houses, villas);
+        HandleBnb.GiveRentalProperty(apartments, houses, villas);
+        HandleBnb.PrintAllProperties("MyBnb/src/OutputProperty.txt",apartments, houses, villas);
+        HandleVehicle.readInputVehicleFile("MyBnb/src/InputVehicle.txt", cars, trucks);
+        HandleVehicle.PrintAllVehicle("MyBnb/src/OutputVehicle.txt", cars, trucks);
         HandleVehicle.CalculateVehicleTotalIncome(cars, trucks);
 
 //        HandlingBnb.CalculateTotalIncome(apartments, houses, villas);

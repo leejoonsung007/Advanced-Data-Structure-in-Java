@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 
-public class HandlingBnb{
+public class HandleBnb{
     public static final double BASIC_ADDITIONAL_FEES = 10;
     public static final double BASIC_TAXES = 12;
     private static final int FRAME_WIDTH = 600;
@@ -139,121 +139,121 @@ public class HandlingBnb{
         }
     }
 
-        //Design a frame which user can insert propertyID and the Rental days
-        public static void GiveRentalProperty(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas)
+    //Design a frame which user can insert propertyID and the Rental days
+    public static void GiveRentalProperty(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas)
+    {
+        //Generate visualisation
+        JFrame frame = new JFrame();
+
+        //The label for displaying PropertyID
+        final JLabel propertyID_label = new JLabel("PropertyID");
+
+        //Text for PropertyID
+        JTextField propertyID_text = new JTextField();
+        propertyID_text.setColumns(5);
+
+        //The label for displaying Rental Days
+        final JLabel rental_days_label = new JLabel("Rental Days");
+
+        //Text for Rental Days
+        JTextField rental_days_text = new JTextField();
+        rental_days_text.setColumns(5);
+
+        //The button to trigger the ok
+        JButton ok_button = new JButton("OK");
+
+        //The button to trigger the cancel
+        JButton cancel_button = new JButton("Cancel");
+
+        //The panel that holds the user interface components
+        JPanel panel = new JPanel();
+        panel.add(propertyID_label);
+        panel.add(propertyID_text);
+        panel.add(rental_days_label);
+        panel.add(rental_days_text);
+        panel.add(ok_button);
+        panel.add(cancel_button);
+        frame.add(panel);
+
+        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        // search propertyID in three ArrayList, if exist, do something. if not exit, return error information
+        class AddOKListener implements ActionListener
         {
-            //Generate visualisation
-            JFrame frame = new JFrame();
+            public void actionPerformed(ActionEvent event) {
+                String pro_id = propertyID_text.getText();
+                String days = rental_days_text.getText();
 
-            //The label for displaying PropertyID
-            final JLabel propertyID_label = new JLabel("PropertyID");
+                // To check whether user has already input propertyID and rental days
+                if ("".equals(pro_id) && "".equals(days)|| "".equals(pro_id) || "".equals(days)) {
+                    System.out.println("Attention: you must input PropertyID and Rental Days");
+                }
+                else {
+                    int pro_id_con = Integer.parseInt(pro_id);
+                    int days_con = Integer.parseInt(days);
 
-            //Text for PropertyID
-            JTextField propertyID_text = new JTextField();
-            propertyID_text.setColumns(5);
-
-            //The label for displaying Rental Days
-            final JLabel rental_days_label = new JLabel("Rental Days");
-
-            //Text for Rental Days
-            JTextField rental_days_text = new JTextField();
-            rental_days_text.setColumns(5);
-
-            //The button to trigger the ok
-            JButton ok_button = new JButton("OK");
-
-            //The button to trigger the cancel
-            JButton cancel_button = new JButton("Cancel");
-
-            //The panel that holds the user interface components
-            JPanel panel = new JPanel();
-            panel.add(propertyID_label);
-            panel.add(propertyID_text);
-            panel.add(rental_days_label);
-            panel.add(rental_days_text);
-            panel.add(ok_button);
-            panel.add(cancel_button);
-            frame.add(panel);
-
-            frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
-
-            // search propertyID in three ArrayList, if exist, do something. if not exit, return error information
-            class AddOKListener implements ActionListener
-            {
-                public void actionPerformed(ActionEvent event) {
-                    String pro_id = propertyID_text.getText();
-                    String days = rental_days_text.getText();
-
-                    // To check whether user has already input propertyID and rental days
-                    if ("".equals(pro_id) && "".equals(days)|| "".equals(pro_id) || "".equals(days)) {
-                        System.out.println("Attention: you must input PropertyID and Rental Days");
+                    //check apartment list
+                    for (int i = 0; i < apartments.size(); i++) {
+                        if (pro_id_con == apartments.get(i).getPropertyID()) {
+                            System.out.println("This apartment ID is " + pro_id_con);
+                            apartments.get(i).RentAnItem(days_con);
+                            System.out.println("The Total day you want to rent this apartment is " + apartments.get(i).getTotal_rental_days());
+                            break;
+                        }
+                        else {
+                            System.out.println("This property is not in apartment list......");
+                            break;
+                        }
                     }
-                    else {
-                        int pro_id_con = Integer.parseInt(pro_id);
-                        int days_con = Integer.parseInt(days);
 
-                        //check apartment list
-                        for (int i = 0; i < apartments.size(); i++) {
-                            if (pro_id_con == apartments.get(i).getPropertyID()) {
-                                System.out.println("This apartment ID is " + pro_id_con);
-                                apartments.get(i).RentAnItem(days_con);
-                                System.out.println("The Total day you want to rent this apartment is " + apartments.get(i).getTotal_rental_days());
-                                break;
-                            }
-                            else {
-                                System.out.println("This property is not in apartment list......");
-                                break;
-                            }
+                    //check house list
+                    for (int j = 0; j < houses.size(); j++) {
+                        if (pro_id_con == houses.get(j).getPropertyID()) {
+                            System.out.println("This house ID is " + pro_id_con);
+                            houses.get(j).RentAnItem(days_con);
+                            System.out.println("The Total day you want to rent this house is " + houses.get(j).getTotal_rental_days());
+                            break;
                         }
-
-                        //check house list
-                        for (int j = 0; j < houses.size(); j++) {
-                            if (pro_id_con == houses.get(j).getPropertyID()) {
-                                System.out.println("This house ID is " + pro_id_con);
-                                houses.get(j).RentAnItem(days_con);
-                                System.out.println("The Total day you want to rent this house is " + houses.get(j).getTotal_rental_days());
-                                break;
-                            }
-                            else {
-                                System.out.println("This property is not in house list......");
-                                break;
-                            }
+                        else {
+                            System.out.println("This property is not in house list......");
+                            break;
                         }
-
-                        //check villa list
-                        for (int k = 0; k < villas.size(); k++) {
-                            if (pro_id_con == villas.get(k).getPropertyID()) {
-                                System.out.println("This house ID is " + pro_id_con);
-                                villas.get(k).RentAnItem(days_con);
-                                System.out.println("The Total day you want to rent this villa is " + villas.get(k).getTotal_rental_days());
-                                break;
-                            }
-                            else {
-                                System.out.println("This property is not in villa list......");
-                                break;
-                            }
-                        }
-
                     }
+
+                    //check villa list
+                    for (int k = 0; k < villas.size(); k++) {
+                        if (pro_id_con == villas.get(k).getPropertyID()) {
+                            System.out.println("This house ID is " + pro_id_con);
+                            villas.get(k).RentAnItem(days_con);
+                            System.out.println("The Total day you want to rent this villa is " + villas.get(k).getTotal_rental_days());
+                            break;
+                        }
+                        else {
+                            System.out.println("This property is not in villa list......");
+                            break;
+                        }
+                    }
+
                 }
             }
-
-            ActionListener ok_listener = new AddOKListener();
-            ok_button.addActionListener(ok_listener);
-
-            // When click cancel button, the frame will be closed
-            class AddCancelListener implements ActionListener{
-                public void actionPerformed(ActionEvent event){
-                    frame.getDefaultCloseOperation();
-                    frame.dispose();
-                }
-            }
-
-            ActionListener cancel_listener = new AddCancelListener();
-            cancel_button.addActionListener(cancel_listener);
         }
+
+        ActionListener ok_listener = new AddOKListener();
+        ok_button.addActionListener(ok_listener);
+
+        // When click cancel button, the frame will be closed
+        class AddCancelListener implements ActionListener{
+            public void actionPerformed(ActionEvent event){
+                frame.getDefaultCloseOperation();
+                frame.dispose();
+            }
+        }
+
+        ActionListener cancel_listener = new AddCancelListener();
+        cancel_button.addActionListener(cancel_listener);
+    }
 }
 
 
