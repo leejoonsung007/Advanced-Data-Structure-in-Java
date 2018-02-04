@@ -1,0 +1,9 @@
+1 1 123 Johnson Dublin1 50 1 2
+1 2 124 Steve Dublin2 40 1 3
+1 3 125 Lucy Dublin3 45 2 4
+2 4 126 Alex Dublin4 60 2 4
+2 5 127 Mary Dublin4 68 3 6
+2 6 128 Jack Dublin4 70 2 3
+3 7 129 Joyce Dublin3 90 15 10
+3 8 130 Eric Dublin15 100 18 12
+3 9 131 Henry Dublin12 105 19 11
