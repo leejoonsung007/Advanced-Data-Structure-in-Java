@@ -1,0 +1,12 @@
+********************************************************Car Information********************************************************
+Register Number:1 Model:Honda-City PropertyId:1000  Owner name:Jason  Address:Dublin1  Cost/day(€):28.0  Passenger number:4
+********************************************************Car Information********************************************************
+Register Number:2 Model:Benz-B-200 PropertyId:1001  Owner name:Lucy  Address:Dublin2  Cost/day(€):35.0  Passenger number:4
+********************************************************Car Information********************************************************
+Register Number:3 Model:Audi-A8 PropertyId:1002  Owner name:Alex  Address:Dublin3  Cost/day(€):45.0  Passenger number:4
+********************************************************Truck Information********************************************************
+Register Number:4 Model:Volvo-FL PropertyId:1003  Owner name:Jack  Address:Dublin4  Cost/day(€):500.0  Cargo Weight:1t
+********************************************************Truck Information********************************************************
+Register Number:5 Model:Volvo-FM PropertyId:1004  Owner name:Eric  Address:Dublin4  Cost/day(€):520.0  Cargo Weight:1.2t
+********************************************************Truck Information********************************************************
+Register Number:6 Model:Volvo-FL PropertyId:1005  Owner name:John  Address:Dublin4  Cost/day(€):460.0  Cargo Weight:0.8t
