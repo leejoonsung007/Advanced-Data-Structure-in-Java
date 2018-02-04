@@ -5,14 +5,14 @@ Register Number:2 PropertyId:124  Owner name:Steve  Address: Dublin2  Cost/day(�
 ********************************************************Apartment Information********************************************************
 Register Number:3 PropertyId:125  Owner name:Lucy  Address: Dublin3  Cost/day(€):45.0  Number of Storey:2  Number of Beds:4
 ********************************************************House Information********************************************************
-Register Number:4 PropertyId:126  Owner name:Alex  Address: Dublin4  Cost/day(€):60.0  Number of Storey:2  Clearing Fees:4.0
+Register Number:4 PropertyId:126  Owner name:Alex  Address: Dublin4  Cost/day(€):60.0  Number of Storey:2  Clearing Fees(€):4.0
 ********************************************************House Information********************************************************
-Register Number:5 PropertyId:127  Owner name:Mary  Address: Dublin4  Cost/day(€):68.0  Number of Storey:3  Clearing Fees:6.0
+Register Number:5 PropertyId:127  Owner name:Mary  Address: Dublin4  Cost/day(€):68.0  Number of Storey:3  Clearing Fees(€):6.0
 ********************************************************House Information********************************************************
-Register Number:6 PropertyId:128  Owner name:Jack  Address: Dublin4  Cost/day(€):70.0  Number of Storey:2  Clearing Fees:3.0
+Register Number:6 PropertyId:128  Owner name:Jack  Address: Dublin4  Cost/day(€):70.0  Number of Storey:2  Clearing Fees(€):3.0
 ***********************************************************Villa Information***********************************************************
-Register Number:7 PropertyId:129  Owner name:Joyce  Address: Dublin3  Cost/day(€):90.0  Luxury Tax/day:10.0  Room Service/day:15.0
+Register Number:7 PropertyId:129  Owner name:Joyce  Address: Dublin3  Cost/day(€):90.0  Luxury Tax/day(€):10.0  Room Service/day(€):15.0
 ***********************************************************Villa Information***********************************************************
-Register Number:8 PropertyId:130  Owner name:Eric  Address: Dublin15  Cost/day(€):100.0  Luxury Tax/day:12.0  Room Service/day:18.0
+Register Number:8 PropertyId:130  Owner name:Eric  Address: Dublin15  Cost/day(€):100.0  Luxury Tax/day(€):12.0  Room Service/day(€):18.0
 ***********************************************************Villa Information***********************************************************
-Register Number:9 PropertyId:131  Owner name:Henry  Address: Dublin12  Cost/day(€):105.0  Luxury Tax/day:11.0  Room Service/day:19.0
+Register Number:9 PropertyId:131  Owner name:Henry  Address: Dublin12  Cost/day(€):105.0  Luxury Tax/day(€):11.0  Room Service/day(€):19.0

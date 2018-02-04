@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Review/Abstract/Abstract.iml" filepath="$PROJECT_DIR$/Review/Abstract/Abstract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment1/Assignment1.iml" filepath="$PROJECT_DIR$/Assignment1/Assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Review/Interface/Interface.iml" filepath="$PROJECT_DIR$/Review/Interface/Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Review/Partial_Innerclass/Partial_Innerclass.iml" filepath="$PROJECT_DIR$/Review/Partial_Innerclass/Partial_Innerclass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Review/Private_Innerclass/Private_Innerclass.iml" filepath="$PROJECT_DIR$/Review/Private_Innerclass/Private_Innerclass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Review/Static_class/Static_class.iml" filepath="$PROJECT_DIR$/Review/Static_class/Static_class.iml" />
+    </modules>
+  </component>
+</project>

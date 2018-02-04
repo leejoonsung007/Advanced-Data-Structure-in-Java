@@ -111,7 +111,7 @@ public class HandleBnb{
         System.out.println(house_title);
         for (House h : houses) {
             String houses_information = ("Register Number:" + h.getRegister_number() + " PropertyId:"+ h.getPropertyID() + "  Owner name:" + h.getOwner_name() + "  Address: " + h.getPostal_address() + "  Cost/day(€):"
-                    + h.getRental_cost_per_day() + "  Number of Storey:" + h.getNumber_of_storeys() + "  Clearing Fees:"
+                    + h.getRental_cost_per_day() + "  Number of Storey:" + h.getNumber_of_storeys() + "  Clearing Fees(€):"
                     + h.getClearing_fees());
             System.out.println(houses_information);
             output_information += house_title + "\n"+ houses_information + "\n";
@@ -122,7 +122,7 @@ public class HandleBnb{
         System.out.println(villas_title);
         for (Villa v : villas) {
             String villas_information = ("Register Number:" + v.getRegister_number() + " PropertyId:"+ v.getPropertyID() + "  Owner name:" + v.getOwner_name() + "  Address: " + v.getPostal_address() + "  Cost/day(€):"
-                    + v.getRental_cost_per_day() + "  Luxury Tax/day:" + v.getLuxury_tax_per_day() + "  Room Service/day:"
+                    + v.getRental_cost_per_day() + "  Luxury Tax/day(€):" + v.getLuxury_tax_per_day() + "  Room Service/day(€):"
                     + v.getRoom_service_cost_per_day());
             System.out.println(villas_information);
             output_information += villas_title + "\n" + villas_information + "\n";
@@ -199,7 +199,7 @@ public class HandleBnb{
                         if (pro_id_con == apartments.get(i).getPropertyID()) {
                             System.out.println("This apartment ID is " + pro_id_con);
                             apartments.get(i).RentAnItem(days_con);
-                            System.out.println("The Total day you want to rent this apartment is " + apartments.get(i).getTotal_rental_days());
+                            System.out.println("The Total day you want to rent this apartment is " + apartments.get(i).getTotal_rental_days() + " days");
                             break;
                         }
                         else {
@@ -213,7 +213,7 @@ public class HandleBnb{
                         if (pro_id_con == houses.get(j).getPropertyID()) {
                             System.out.println("This house ID is " + pro_id_con);
                             houses.get(j).RentAnItem(days_con);
-                            System.out.println("The Total day you want to rent this house is " + houses.get(j).getTotal_rental_days());
+                            System.out.println("The Total day you want to rent this house is " + houses.get(j).getTotal_rental_days() + " days");
                             break;
                         }
                         else {
@@ -227,7 +227,7 @@ public class HandleBnb{
                         if (pro_id_con == villas.get(k).getPropertyID()) {
                             System.out.println("This house ID is " + pro_id_con);
                             villas.get(k).RentAnItem(days_con);
-                            System.out.println("The Total day you want to rent this villa is " + villas.get(k).getTotal_rental_days());
+                            System.out.println("The Total day you want to rent this villa is " + villas.get(k).getTotal_rental_days() + " days");
                             break;
                         }
                         else {
