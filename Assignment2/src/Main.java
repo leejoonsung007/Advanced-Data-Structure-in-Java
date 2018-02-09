@@ -10,11 +10,11 @@ public class Main
         ArrayList<Car> cars = new ArrayList<Car>();
         ArrayList<Truck> trucks = new ArrayList<Truck>();
 
-        HandleBnb.readInputPropertyFile("InputProperty.txt", apartments, houses, villas);
+        HandleBnb.readInputPropertyFile("src/InputProperty.txt", apartments, houses, villas);
         HandleBnb.GiveRentalProperty(apartments, houses, villas);
-        HandleBnb.PrintAllProperties("OutputProperty.txt", apartments, houses, villas);
-        HandleVehicle.readInputVehicleFile("InputVehicle.txt", cars, trucks);
-        HandleVehicle.PrintAllVehicle("OutputVehicle.txt", cars, trucks);
+        HandleBnb.PrintAllProperties("src/OutputProperty.txt", apartments, houses, villas);
+        HandleVehicle.readInputVehicleFile("src/InputVehicle.txt", cars, trucks);
+        HandleVehicle.PrintAllVehicle("src/OutputVehicle.txt", cars, trucks);
         HandleVehicle.CalculateVehicleTotalIncome(cars, trucks);
     }
 }
