@@ -5,18 +5,21 @@ public class C6 {
     {
         Random generator = new Random();
         int [] N = new int[] {100000, 200000, 500000, 1000000, 2000000};
-        double duration = 0;
+        long duration = 0;
 
-        for(int i=0; i < N.length; i++){
+        for(int i=0; i < N.length; i++) {
             int[] random_array = ArrayUtil.randomIntArray(N[i]);
-            long start = System.currentTimeMillis();
-            MinValueIndex(random_array, N[i]);
-            long end = System.currentTimeMillis();
-            duration += end - start;
+
+            for (int j = 0; j < 5; j++) {
+                long start = System.nanoTime();
+                MinValueIndex(random_array, N[i]);
+                long end = System.nanoTime();
+                duration += end - start;
+            }
             duration = duration / 5;
             System.out.println("When N = " + N[i] + " Running Time = " + duration);
+        }
     }
-}
 
     public static int MinValueIndex(int[] A, int n)
     {
