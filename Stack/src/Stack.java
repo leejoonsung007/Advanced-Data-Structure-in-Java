@@ -1,7 +1,4 @@
-package assignment3;
-
-
-     /** 
+/**
       * Interface for a stack: a collection of objects that are inserted
       * and removed according to the last-in first-out principle.  This
       * interface includes the main methods of java.util.Stack.
@@ -33,7 +30,7 @@ package assignment3;
       * Insert an element at the top of the stack.
       * @param element to be inserted.
       */
-      public void push (E element); 
+      public void push(E element);
      /** 
       * Remove the top element from the stack.
       * @return element removed.

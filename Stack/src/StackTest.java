@@ -1,5 +1,3 @@
-package assignment3;
-
 public class StackTest {
 	public static void main(String[] args) {
 		ArrayStack s = new ArrayStack();

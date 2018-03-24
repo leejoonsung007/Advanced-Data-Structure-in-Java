@@ -1,4 +1,3 @@
-package assignment3;
 // Fig. 18.8: FullStackException.java
 // Indicates a stack is full.
 public class FullStackException extends RuntimeException

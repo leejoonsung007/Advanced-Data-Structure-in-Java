@@ -1,5 +1,3 @@
-package assignment3;
-
 public class ArrayStack<E> implements Stack<E>{
 	private E S[]; //An array of objects
 	private int N = 1000; //Array size
@@ -52,9 +50,9 @@ public class ArrayStack<E> implements Stack<E>{
 	
 	public String toString() {
 	    String s = "";
-	    int number = 0;
+	    int number = -1;
 //	    generate the number
-	    for(int j = 0; j <= size(); j++) {
+	    for(int j = -1; j <= size(); j++) {
 	    		number = j;
 	    }
 	    if (size() > 0) {
